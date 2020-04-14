@@ -1,0 +1,26 @@
+@use '../variables' as var;
+
+@media only screen and (max-width: var.$layout-screen-size-threshold) {
+    .mz-layout-header {
+        min-height: var.$layout-mobile-header-height;
+
+        .mz-layout-header-row {
+            padding: var.$layout-header-mobile-gutters;
+            height: var.$layout-header-mobile-row-height;
+
+            & .mz-navigation {
+                height: var.$layout-header-mobile-row-height;
+            }
+
+            & .mz-navigation-link {
+                line-height: var.$layout-header-mobile-row-height;
+                padding: var.$layout-navigation-mobile-link-padding;
+            }
+        }
+
+        .mz-layout-drawer-button {
+            display: block;
+            margin-left: -12px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+// COMMON
+
+$action-display-header-navigation: true !default;
+$action-display-drawer-navigation: true !default;
+$action-display-drawer-button: true !default;
+
+$action-1-hover-color: rgba(0, 0, 0, 0.04) !default;
+$action-1-active-color: rgba(0, 0, 0, 0.08) !default;
+
+$item-active-color: rgba(0, 0, 0, 0.08) !default;
+
+$card-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1) !default;
+$card-outline: 1px solid #e8eef1 !default;
+
+$divider-color: rgba(0, 0, 0, 0.12) !default;
+
+// SELECTION
+
+$selection-color: #b3d4fc !default;
+
+// TYPOGRAPHY
+
+$preferred-font: "Roboto", "Helvetica", "Arial", sans-serif !default;
+$performance-font: "Helvetica", "Arial", sans-serif !default;
+
+$target-elements-directly: true !default;
+$typography-class-styles: true !default;
+
+$text-color-default: rgba(0, 0, 0, 0.87) !default;
+
+$text-color-primary: #00064b !default;
+$text-color-secondary: #857f99 !default;
+$text-color-link: #006cfb !default;
+
+// LAYOUT
+
+$layout-screen-size-threshold: 1024px !default;
+
+$layout-header-color: #fff !default;
+$layout-header-text-color: #000 !default;
+
+$layout-drawer-color: #fff !default;
+$layout-drawer-text-color: #000 !default;
+
+$layout-drawer-width: 256px !default;
+
+$layout-drawer-link-text-color: rgba(0, 0, 0, 0.87) !default;
+$layout-drawer-link-icon-color: rgba(0, 0, 0, 0.6) !default;
+$layout-navigation-drawer-link-padding: 16px 25px !default;
+$layout-drawer-title-padding: 0 25px !default;
+
+$layout-header-desktop-row-height: 64px !default;
+$layout-desktop-header-height: $layout-header-desktop-row-height;
+$layout-header-mobile-row-height: 56px !default;
+$layout-mobile-header-height: $layout-header-mobile-row-height;
+
+$layout-header-desktop-gutters: 0 40px !default;
+$layout-header-mobile-gutters: 0 16px !default;
+
+$layout-navigation-desktop-link-padding: 0 24px !default;
+$layout-navigation-mobile-link-padding: 0 16px !default;
+
+$layout-obfuscator-color: rgba(0, 0, 0, 0.5) !default;
+$layout-transition-function: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$layout-transition-duration: 0.2s !default;

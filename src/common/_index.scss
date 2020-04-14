@@ -1,0 +1,39 @@
+@use '../variables' as var;
+
+@use 'responsiveness';
+
+.mz-shadow {
+    box-shadow: var.$card-shadow;
+}
+
+.mz-outline {
+    border: var.$card-outline;
+}
+
+.mz-rounded--sm {
+    border-radius: 4px;
+}
+
+.mz-rounded--lg {
+    border-radius: 8px;
+}
+
+.mz-rounded--circle {
+    border-radius: 50%;
+}
+
+.mz-no-scrollbar {
+    overflow: hidden;
+}
+
+.mz-divider-horizontal {
+    width: 100%;
+    margin: 8px 0;
+    border-bottom: 1px solid var.$divider-color;
+}
+
+.mz-divider-vertical {
+    height: 100%;
+    margin: 0 8px;
+    border-left: 1px solid var.$divider-color;
+}

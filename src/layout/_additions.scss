@@ -1,0 +1,57 @@
+@use '../variables' as var;
+@use '../mixins' as mix;
+
+.mz-layout-obfuscator {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    background-color: var.$layout-obfuscator-color;
+    position: fixed;
+    transition-property: opacity, visibility;
+    transition-duration: var.$layout-transition-duration;
+    transition-timing-function: var.$layout-transition-function;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &.is-visible {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+.mz-layout-title {
+    display: block;
+    @include mix.typo-title();
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.mz-layout-spacer {
+    flex-grow: 1;
+}
+
+.mz-navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+.mz-navigation-link {
+    color: var.$layout-header-text-color;
+    text-decoration: none;
+    margin: 0;
+    @include mix.typo-body-1(true);
+
+    // Align icons inside link with text
+    & .material-icons {
+        vertical-align: middle;
+    }
+
+    &.mz-item-active {
+        background-color: var.$item-active-color;
+    }
+}

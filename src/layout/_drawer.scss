@@ -1,0 +1,62 @@
+@use '../variables' as var;
+@use '../mixins' as mix;
+
+.mz-layout-drawer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    z-index: 6;
+    overflow-x: auto;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-100%);
+    transition-property: transform, visibility;
+    transition-duration: var.$layout-transition-duration;
+    transition-timing-function: var.$layout-transition-function;
+    width: var.$layout-drawer-width;
+    color: var.$layout-drawer-text-color;
+    background-color: var.$layout-drawer-color;
+
+    .mz-layout-title {
+        line-height: 64px;
+        padding: var.$layout-drawer-title-padding;
+
+        + .mz-divider-horizontal {
+            margin-top: 0;
+        }
+    }
+
+    .mz-navigation {
+        flex-direction: column;
+        align-items: stretch;
+
+        .mz-navigation-link {
+            display: block;
+            flex-shrink: 0;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var.$layout-drawer-link-text-color;
+            user-select: none;
+            padding: var.$layout-navigation-drawer-link-padding;
+            @include mix.typo-menu;
+            @if var.$action-display-drawer-navigation {
+                @include mix.action-display-1;
+            }
+
+            .material-icons {
+                color: var.$layout-drawer-link-icon-color;
+                margin-right: 25px;
+            }
+        }
+    }
+
+    &.is-visible {
+        transform: none;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
