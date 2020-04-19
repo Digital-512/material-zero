@@ -8,7 +8,7 @@
     bottom: 0;
     box-sizing: border-box;
     z-index: 6;
-    overflow-x: auto;
+    overflow-y: auto;
     visibility: hidden;
     pointer-events: none;
     transform: translate(-100%);
@@ -33,16 +33,11 @@
         align-items: stretch;
 
         .mz-navigation-link {
-            display: block;
-            flex-shrink: 0;
-            margin: 0;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             color: var.$layout-drawer-link-text-color;
-            user-select: none;
             padding: var.$layout-navigation-drawer-link-padding;
-            @include mix.typo-menu;
             @if var.$action-display-drawer-navigation {
                 @include mix.action-display-1;
             }

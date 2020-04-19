@@ -6,8 +6,24 @@
     box-shadow: var.$card-shadow;
 }
 
-.mz-outline {
+.mz-border-outline {
     border: var.$card-outline;
+}
+
+.mz-border-top {
+    border-top: var.$card-outline;
+}
+
+.mz-border-right {
+    border-right: var.$card-outline;
+}
+
+.mz-border-bottom {
+    border-bottom: var.$card-outline;
+}
+
+.mz-border-left {
+    border-left: var.$card-outline;
 }
 
 .mz-rounded--sm {

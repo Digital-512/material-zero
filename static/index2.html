@@ -23,12 +23,23 @@
         main {
             padding: 40px;
         }
+
+        /* Use custom title colors for drawer */
+        .mz-layout-drawer .mz-layout-title {
+            background-color: #39b54a;
+            color: #fff;
+        }
+
+        /* Remove divider border under the drawer title */
+        .mz-layout-drawer .mz-layout-title+.mz-divider-horizontal {
+            border-bottom: none;
+        }
     </style>
 </head>
 
 <body>
-    <div class="mz-layout">
-        <div class="mz-layout-drawer mz-shadow">
+    <div class="mz-layout mz-layout--drawer-fixed mz-layout--header-fixed-top">
+        <div class="mz-layout-drawer">
             <span class="mz-layout-title">Title</span>
             <div class="mz-divider-horizontal"></div>
             <nav class="mz-navigation">
@@ -45,7 +56,7 @@
             <header class="mz-layout-header">
                 <div class="mz-layout-header-row">
                     <span class="mz-layout-drawer-button material-icons">menu</span>
-                    <span class="mz-layout-title">Title</span>
+                    <span class="mz-layout-title">Admin panel</span>
                     <div class="mz-layout-spacer"></div>
                     <nav class="mz-navigation">
                         <a class="mz-navigation-link" href="">Link</a>

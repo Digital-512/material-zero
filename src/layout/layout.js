@@ -8,23 +8,23 @@ const cssClasses = {
     IS_VISIBLE: 'is-visible'
 }
 
-const showDrawer = el => {
-    el.classList.add(cssClasses.NO_SCROLLBAR);
+const showDrawer = (body, el) => {
+    body.classList.add(cssClasses.NO_SCROLLBAR);
     el._obfuscator.classList.add(cssClasses.IS_VISIBLE);
     el._drawer.classList.add(cssClasses.IS_VISIBLE);
     el._drawer.setAttribute('aria-hidden', 'false');
     el._drawer_button.setAttribute('aria-expanded', 'true');
 }
 
-const hideDrawer = el => {
-    el.classList.remove(cssClasses.NO_SCROLLBAR);
+const hideDrawer = (body, el) => {
+    body.classList.remove(cssClasses.NO_SCROLLBAR);
     el._obfuscator.classList.remove(cssClasses.IS_VISIBLE);
     el._drawer.classList.remove(cssClasses.IS_VISIBLE);
     el._drawer.setAttribute('aria-hidden', 'true');
     el._drawer_button.setAttribute('aria-expanded', 'false');
 }
 
-export const initializeLayout = element => {
+export const initializeLayout = (body, element) => {
     // Get elements from HTML.
     element._drawer = element.getElementsByClassName(cssClasses.DRAWER).item(0);
     element._drawer_button = element.getElementsByClassName(cssClasses.DRAWER_BUTTON).item(0);
@@ -42,14 +42,14 @@ export const initializeLayout = element => {
 
     // Events
     element._drawer_button.addEventListener('click', () => {
-        showDrawer(element);
+        showDrawer(body, element);
     });
     element._obfuscator.addEventListener('click', () => {
-        hideDrawer(element);
+        hideDrawer(body, element);
     });
     element.addEventListener('keydown', (evt) => {
         if (evt.keyCode === 27 && element._drawer.classList.contains(cssClasses.IS_VISIBLE)) {
-            hideDrawer(element);
+            hideDrawer(body, element);
         }
     })
 }

@@ -1,6 +1,50 @@
 @use '../variables' as var;
 @use '../mixins' as mix;
 
+.mz-layout {
+    &.mz-layout--desktop-drawer-button {
+        .mz-layout-drawer-button {
+            display: block;
+        }
+    }
+
+    &.mz-layout--no-drawer-button {
+        .mz-layout-drawer-button {
+            display: none !important;
+        }
+    }
+
+    &.mz-layout--header-fixed-top {
+        .mz-layout-header {
+            position: fixed;
+            top: 0;
+        }
+
+        .mz-layout-content {
+            padding-top: var.$layout-desktop-header-height;
+        }
+    }
+
+    &.mz-layout--header-fixed-bottom {
+        .mz-layout-header {
+            position: fixed;
+            bottom: 0;
+        }
+
+        .mz-layout-content {
+            padding-bottom: var.$layout-desktop-header-height;
+        }
+    }
+
+    &.mz-layout--header-sticky {
+        .mz-layout-header {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+    }
+}
+
 .mz-layout-obfuscator {
     visibility: hidden;
     pointer-events: none;
@@ -25,7 +69,7 @@
 
 .mz-layout-title {
     display: block;
-    @include mix.typo-title();
+    @include mix.typo-title;
     font-weight: 400;
     box-sizing: border-box;
 }
@@ -41,10 +85,12 @@
 }
 
 .mz-navigation-link {
+    display: block;
     color: var.$layout-header-text-color;
     text-decoration: none;
+    user-select: none;
     margin: 0;
-    @include mix.typo-body-1(true);
+    @include mix.typo-menu;
 
     // Align icons inside link with text
     & .material-icons {
