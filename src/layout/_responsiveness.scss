@@ -25,15 +25,17 @@
     }
 
     .mz-layout {
-        &.mz-layout--header-fixed-top {
+        &.mz-layout--header-fixed {
             .mz-layout-content {
                 padding-top: var.$layout-mobile-header-height;
             }
         }
 
-        &.mz-layout--header-fixed-bottom {
-            .mz-layout-content {
-                padding-bottom: var.$layout-mobile-header-height;
+        @if var.$layout-non-standard-positions {
+            &.mz-layout--header-fixed-bottom {
+                .mz-layout-content {
+                    padding-bottom: var.$layout-mobile-header-height;
+                }
             }
         }
     }
@@ -41,7 +43,7 @@
 
 @media only screen and (min-width: var.$layout-screen-size-threshold + 1px) {
     .mz-layout {
-        &.mz-layout--header-fixed-top {
+        &.mz-layout--header-fixed {
             &.mz-layout--drawer-fixed {
                 .mz-layout-header {
                     width: initial;
@@ -49,19 +51,48 @@
                     right: 0;
                 }
             }
-        }
 
-        &.mz-layout--header-fixed-bottom {
-            &.mz-layout--drawer-fixed {
+            &.mz-layout--drawer-clipped {
+                .mz-layout-drawer {
+                    top: var.$layout-desktop-header-height;
+                }
+
                 .mz-layout-header {
                     width: initial;
-                    left: var.$layout-drawer-width;
+                    z-index: 7;
+                    left: 0;
                     right: 0;
                 }
             }
         }
 
-        &.mz-layout--drawer-fixed {
+        @if var.$layout-non-standard-positions {
+            &.mz-layout--header-fixed-bottom {
+                &.mz-layout--drawer-fixed {
+                    .mz-layout-header {
+                        width: initial;
+                        left: var.$layout-drawer-width;
+                        right: 0;
+                    }
+                }
+
+                &.mz-layout--drawer-clipped {
+                    .mz-layout-drawer {
+                        bottom: var.$layout-desktop-header-height;
+                    }
+
+                    .mz-layout-header {
+                        width: initial;
+                        z-index: 7;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &.mz-layout--drawer-fixed,
+        &.mz-layout--drawer-clipped {
             .mz-layout-drawer {
                 transform: none;
                 visibility: visible;

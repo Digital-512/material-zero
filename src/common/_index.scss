@@ -6,23 +6,23 @@
     box-shadow: var.$card-shadow;
 }
 
-.mz-border-outline {
+.mz-border--outline {
     border: var.$card-outline;
 }
 
-.mz-border-top {
+.mz-border--top {
     border-top: var.$card-outline;
 }
 
-.mz-border-right {
+.mz-border--right {
     border-right: var.$card-outline;
 }
 
-.mz-border-bottom {
+.mz-border--bottom {
     border-bottom: var.$card-outline;
 }
 
-.mz-border-left {
+.mz-border--left {
     border-left: var.$card-outline;
 }
 
@@ -39,7 +39,19 @@
 }
 
 .mz-no-scrollbar {
-    overflow: hidden;
+    overflow: hidden !important;
+}
+
+.mz-no-margin {
+    margin: 0 !important;
+}
+
+.mz-no-padding {
+    padding: 0 !important;
+}
+
+.mz-no-border {
+    border: none !important;
 }
 
 .mz-divider-horizontal {

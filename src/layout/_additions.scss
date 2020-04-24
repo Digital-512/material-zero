@@ -14,7 +14,7 @@
         }
     }
 
-    &.mz-layout--header-fixed-top {
+    &.mz-layout--header-fixed {
         .mz-layout-header {
             position: fixed;
             top: 0;
@@ -25,14 +25,16 @@
         }
     }
 
-    &.mz-layout--header-fixed-bottom {
-        .mz-layout-header {
-            position: fixed;
-            bottom: 0;
-        }
+    @if var.$layout-non-standard-positions {
+        &.mz-layout--header-fixed-bottom {
+            .mz-layout-header {
+                position: fixed;
+                bottom: 0;
+            }
 
-        .mz-layout-content {
-            padding-bottom: var.$layout-desktop-header-height;
+            .mz-layout-content {
+                padding-bottom: var.$layout-desktop-header-height;
+            }
         }
     }
 

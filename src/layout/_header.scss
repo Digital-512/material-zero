@@ -43,7 +43,7 @@
         }
 
         & .mz-navigation-link {
-            color: var.$layout-header-text-color;
+            color: inherit;
             height: 100%;
             line-height: var.$layout-header-desktop-row-height;
             padding: var.$layout-navigation-desktop-link-padding;

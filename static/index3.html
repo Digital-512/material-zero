@@ -26,16 +26,22 @@
 
         /* Use custom title colors for drawer */
         .mz-layout-drawer .mz-layout-title {
-            background-color: #39b54a;
+            background-color: #1976d2;
+            color: #fff;
+        }
+
+        /* Use custom colors for header */
+        .mz-layout-header {
+            background-color: #1976d2;
             color: #fff;
         }
     </style>
 </head>
 
 <body>
-    <div class="mz-layout mz-layout--drawer-fixed mz-layout--header-fixed">
+    <div class="mz-layout mz-layout--drawer-clipped mz-layout--header-fixed">
         <div class="mz-layout-drawer mz-shadow--screen-small">
-            <span class="mz-layout-title">Title</span>
+            <span class="mz-layout-title mz-screen-small">Title</span>
             <div class="mz-divider-horizontal mz-no-border"></div>
             <nav class="mz-navigation">
                 <a class="mz-navigation-link mz-item-active" href=""><span class="material-icons">inbox</span>Inbox</a>
@@ -48,10 +54,10 @@
             </nav>
         </div>
         <div class="mz-layout-content">
-            <header class="mz-layout-header">
+            <header class="mz-layout-header mz-shadow">
                 <div class="mz-layout-header-row">
                     <span class="mz-layout-drawer-button material-icons">menu</span>
-                    <span class="mz-layout-title">Admin panel</span>
+                    <span class="mz-layout-title">Clipped drawer</span>
                     <div class="mz-layout-spacer"></div>
                     <nav class="mz-navigation">
                         <a class="mz-navigation-link" href="">Link</a>

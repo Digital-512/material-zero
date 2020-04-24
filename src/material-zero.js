@@ -6,11 +6,11 @@ import { initializeLayout } from './layout/layout';
 
 // Exported initialization function.
 // Remove unnecessary components from here.
-export const initialize = (body, element) => {
-    initializeLayout(body, element);
+export const initialize = element => {
+    initializeLayout(element);
 }
 
 // Default initialization.
 // Remove or comment this line if you do not want to
 // initialize components on a BODY element.
-initialize(document.body, document.querySelector('.mz-layout'));
+initialize(document.body);

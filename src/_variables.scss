@@ -14,6 +14,8 @@ $card-outline: 1px solid #e8eef1 !default;
 
 $divider-color: rgba(0, 0, 0, 0.12) !default;
 
+$include-responsive-modifiers: true !default;
+
 // SELECTION
 
 $selection-color: #b3d4fc !default;
@@ -33,6 +35,8 @@ $text-color-secondary: #857f99 !default;
 $text-color-link: #006cfb !default;
 
 // LAYOUT
+
+$layout-non-standard-positions: true !default;
 
 $layout-screen-size-threshold: 1024px !default;
 
