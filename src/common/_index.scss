@@ -7,23 +7,23 @@
 }
 
 .mz-border--outline {
-    border: var.$card-outline;
+    border: var.$outline-border;
 }
 
 .mz-border--top {
-    border-top: var.$card-outline;
+    border-top: var.$outline-border;
 }
 
 .mz-border--right {
-    border-right: var.$card-outline;
+    border-right: var.$outline-border;
 }
 
 .mz-border--bottom {
-    border-bottom: var.$card-outline;
+    border-bottom: var.$outline-border;
 }
 
 .mz-border--left {
-    border-left: var.$card-outline;
+    border-left: var.$outline-border;
 }
 
 .mz-rounded--sm {
@@ -57,11 +57,11 @@
 .mz-divider-horizontal {
     width: 100%;
     margin: 8px 0;
-    border-bottom: 1px solid var.$divider-color;
+    border-bottom: var.$outline-border;
 }
 
 .mz-divider-vertical {
     height: 100%;
     margin: 0 8px;
-    border-left: 1px solid var.$divider-color;
+    border-left: var.$outline-border;
 }

@@ -1,0 +1,15 @@
+@use 'variables' as var;
+
+// Background colors
+@each $name, $color in var.$colors {
+    .mz-colors--#{$name} {
+        background-color: $color;
+    }
+}
+
+// Text colors
+@each $name, $color in var.$colors {
+    .mz-colors-text--#{$name} {
+        color: $color;
+    }
+}
