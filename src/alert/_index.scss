@@ -1,0 +1,61 @@
+@use '../variables' as var;
+@use '../mixins' as mix;
+
+.mz-alert {
+    padding: 16px 18px;
+    margin: 16px 0;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    @include mix.typo-box;
+
+    &.mz-alert--rich {
+        flex-direction: column;
+    }
+
+    &.mz-alert--dismissible {
+        position: relative;
+        padding-right: 64px;
+        transition-property: opacity;
+        transition-duration: var.$box-transition-duration;
+        transition-timing-function: var.$box-transition-function;
+
+        .mz-alert-close {
+            margin: 0;
+            opacity: 0.85;
+            position: absolute;
+            right: 18px;
+            top: 11px;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 50%;
+            user-select: none;
+            cursor: pointer;
+            @include mix.action-display-1;
+        }
+    }
+
+    .material-icons {
+        margin-right: 12px;
+        line-height: inherit;
+        vertical-align: middle;
+        user-select: none;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 8px;
+    }
+}

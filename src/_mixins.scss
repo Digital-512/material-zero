@@ -207,6 +207,17 @@
     }
 }
 
+@mixin typo-box($colorContrast: false, $usePreferred: true, $fontSize: 14px) {
+    @include typo-preferred-font($usePreferred);
+    font-size: $fontSize;
+    font-weight: 500;
+    letter-spacing: 0;
+
+    @if $colorContrast {
+        opacity: 0.87;
+    }
+}
+
 @mixin typo-button($colorContrast: false, $usePreferred: true) {
     @include typo-preferred-font($usePreferred);
     font-size: 14px;

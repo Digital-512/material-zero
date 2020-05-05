@@ -38,6 +38,10 @@
     border-radius: 50%;
 }
 
+.mz-rounded--pill {
+    border-radius: 50px;
+}
+
 .mz-no-scrollbar {
     overflow: hidden !important;
 }
@@ -57,7 +61,8 @@
 .mz-divider-horizontal {
     width: 100%;
     margin: 8px 0;
-    border-bottom: var.$outline-border;
+    height: initial;
+    border-top: var.$outline-border;
 }
 
 .mz-divider-vertical {

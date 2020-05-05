@@ -24,15 +24,15 @@
 
 <body>
     <div class="mz-layout mz-layout--drawer-clipped mz-layout--header-fixed">
-        <div class="mz-layout-drawer mz-shadow--screen-small mz-border--right">
+        <div class="mz-layout-drawer mz-shadow--screen-small mz-border--right--screen-large">
             <span class="mz-layout-title mz-screen-small mz-colors--midnight-black mz-colors-text--white">Material-Zero</span>
-            <div class="mz-divider-horizontal mz-no-border"></div>
+            <hr class="mz-divider-horizontal mz-no-border">
             <nav class="mz-navigation">
                 <a class="mz-navigation-link mz-item-active" href=""><span class="material-icons">inbox</span>Inbox</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">star</span>Star</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">send</span>Sent Mail</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">drafts</span>Drafts</a>
-                <div class="mz-divider-horizontal"></div>
+                <hr class="mz-divider-horizontal">
                 <a class="mz-navigation-link" href=""><span class="material-icons">settings</span>Settings</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">announcement</span>Help & feedback</a>
             </nav>
@@ -52,8 +52,64 @@
                 </div>
             </header>
             <main>
+                <h3 id="badge">Alert</h3>
+                <p>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+
+                <h4>Simple filled alerts</h4>
+                <div class="mz-alert mz-colors--blue mz-colors-text--white"><span class="material-icons">info</span>This is an info alert - check it out!</div>
+                <div class="mz-alert mz-colors--amber mz-colors-text--white"><span class="material-icons">warning</span>This is a warning alert - check it out!</div>
+                <div class="mz-alert mz-colors--red mz-colors-text--white"><span class="material-icons">error</span>This is an error alert - check it out!</div>
+                <div class="mz-alert mz-colors--green mz-colors-text--white"><span class="material-icons">done</span>This is a success alert - check it out!</div>
+                <div class="mz-alert mz-colors--midnight-black mz-colors-text--white"><span class="material-icons">star</span>Alerts can have any color - check it out!</div>
+
+                <h4>Simple outlined alerts</h4>
+                <div class="mz-alert mz-border--outline mz-colors-border--blue mz-colors-text--blue"><span class="material-icons">info</span>This is an info alert - check it out!</div>
+                <div class="mz-alert mz-border--outline mz-colors-border--amber mz-colors-text--amber"><span class="material-icons">warning</span>This is a warning alert - check it out!</div>
+                <div class="mz-alert mz-border--outline mz-colors-border--red mz-colors-text--red"><span class="material-icons">error</span>This is an error alert - check it out!</div>
+                <div class="mz-alert mz-border--outline mz-colors-border--green mz-colors-text--green"><span class="material-icons">done</span>This is a success alert - check it out!</div>
+                <div class="mz-alert mz-border--outline mz-colors-border--midnight-black mz-colors-text--midnight-black"><span class="material-icons">star</span>Alerts can have any color - check it out!</div>
+
+                <h4>Dismissible alert</h4>
+                <div class="mz-alert mz-alert--dismissible mz-colors--blue mz-colors-text--white">
+                    <span class="material-icons">info</span>
+                    This is a dismissible info alert - check it out!
+                    <span class="mz-alert-close material-icons" data-dismiss="true">clear</span>
+                </div>
+                <div class="mz-alert mz-alert--dismissible mz-border--outline mz-colors-border--red mz-colors-text--red">
+                    <span class="material-icons">error</span>
+                    This is a dismissible error alert - check it out!
+                    <span class="mz-alert-close material-icons" data-dismiss="true">clear</span>
+                </div>
+
+                <h4>Rounded and shadowy alerts</h4>
+                <div class="mz-alert mz-rounded--sm mz-colors--blue mz-colors-text--white"><span class="material-icons">info</span>This is a rounded alert - check it out!</div>
+                <div class="mz-alert mz-rounded--sm mz-border--outline mz-colors-border--blue mz-colors-text--blue"><span class="material-icons">info</span>This is a rounded and outlined alert - check it out!</div>
+                <div class="mz-alert mz-shadow mz-colors--midnight-blue mz-colors-text--white"><span class="material-icons">done</span>This alert has a shadow - check it out!</div>
+                <div class="mz-alert mz-colors-text--red"><span class="material-icons">error</span>This alert has only text - check it out!</div>
+
+                <h4>Alerts with additional content</h4>
+                <div class="mz-alert mz-alert--rich mz-colors--green mz-colors-text--white">
+                    <h4>Well done!</h4>
+                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                    <hr class="mz-divider-horizontal">
+                    <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                </div>
                 <h3 id="badge">Badge</h3>
                 <p>Small status descriptors for UI elements.</p>
+
+                <h4>Simple badges</h4>
+                <div style="margin-bottom: 16px;">Inbox<span class="mz-badge mz-colors--blue mz-colors-text--white">4</span></div>
+                <div style="margin-bottom: 16px;">Rounded<span class="mz-badge mz-rounded--pill mz-colors--blue mz-colors-text--white">4</span></div>
+                <div style="margin-bottom: 16px;">Pill-shaped<span class="mz-badge mz-rounded--pill mz-colors--green mz-colors-text--white">99+</span></div>
+                <div style="margin-bottom: 16px;">Outlined<span class="mz-badge mz-border--outline mz-rounded--pill mz-colors-border--green mz-colors-text--green">999+</span></div>
+                <div style="margin-bottom: 16px;">Text-only<span class="mz-badge mz-colors-text--blue">Meow!</span></div>
+                <div style="margin-bottom: 16px;">Icon<span class="mz-badge mz-rounded--circle mz-colors--red mz-colors-text--white"><span class="material-icons">favorite</span></span></div>
+
+                <h4>Overlapped badges</h4>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">account_box<span class="mz-badge mz-colors--blue mz-colors-text--white">4</span></div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">account_box<span class="mz-badge mz-rounded--pill mz-colors--blue mz-colors-text--white">4</span></div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">mail<span class="mz-badge mz-rounded--pill mz-colors--green mz-colors-text--white">99+</span></div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">people_alt<span class="mz-badge mz-rounded--circle mz-colors--red mz-colors-text--white"><span class="material-icons">favorite</span></span></div>
             </main>
         </div>
     </div>

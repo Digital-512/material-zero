@@ -13,3 +13,10 @@
         color: $color;
     }
 }
+
+// Border colors
+@each $name, $color in var.$colors {
+    .mz-colors-border--#{$name} {
+        border-color: $color;
+    }
+}

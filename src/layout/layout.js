@@ -1,5 +1,7 @@
 "use strict";
 
+// LAYOUT
+
 const cssClasses = {
     LAYOUT: 'mz-layout',
     DRAWER: 'mz-layout-drawer',
