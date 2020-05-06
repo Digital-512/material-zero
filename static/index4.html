@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="theme-color" content="#212121">
     <title>Material-Zero Dev</title>
 
     <!-- Include fonts and icons -->
@@ -18,6 +19,11 @@
     <style>
         main {
             padding: 40px;
+        }
+
+        .mz-button {
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
         }
     </style>
 </head>
@@ -106,10 +112,120 @@
                 <div style="margin-bottom: 16px;">Icon<span class="mz-badge mz-rounded--circle mz-colors--red mz-colors-text--white"><span class="material-icons">favorite</span></span></div>
 
                 <h4>Overlapped badges</h4>
-                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">account_box<span class="mz-badge mz-colors--blue mz-colors-text--white">4</span></div>
-                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">account_box<span class="mz-badge mz-rounded--pill mz-colors--blue mz-colors-text--white">4</span></div>
-                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">mail<span class="mz-badge mz-rounded--pill mz-colors--green mz-colors-text--white">99+</span></div>
-                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">people_alt<span class="mz-badge mz-rounded--circle mz-colors--red mz-colors-text--white"><span class="material-icons">favorite</span></span></div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">
+                    account_box
+                    <span class="mz-badge mz-colors--blue mz-colors-text--white">4</span>
+                </div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">
+                    account_box
+                    <span class="mz-badge mz-rounded--pill mz-colors--blue mz-colors-text--white">4</span>
+                </div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">
+                    mail
+                    <span class="mz-badge mz-rounded--pill mz-colors--green mz-colors-text--white">99+</span>
+                </div>
+                <div style="margin-right: 16px; font-size: 32px;" class="material-icons mz-badge--overlap">
+                    people_alt
+                    <span class="mz-badge mz-rounded--circle mz-colors--red mz-colors-text--white">
+                        <span class="material-icons">favorite</span>
+                    </span>
+                </div>
+
+                <h3 id="badge">Button</h3>
+                <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
+
+                <h4>Simple filled buttons</h4>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white">Primary</button>
+                <button type="button" class="mz-button mz-colors--amber mz-colors-text--white">Warning</button>
+                <button type="button" class="mz-button mz-colors--red mz-colors-text--white">Error</button>
+                <button type="button" class="mz-button mz-colors--green mz-colors-text--white">Success</button>
+                <button type="button" class="mz-button mz-colors--midnight-black mz-colors-text--white">Dark</button>
+
+                <h4>Simple outlined buttons</h4>
+                <button type="button" class="mz-button mz-border--outline mz-colors-border--blue mz-colors-text--blue">Primary</button>
+                <button type="button" class="mz-button mz-border--outline mz-colors-border--amber mz-colors-text--amber">Warning</button>
+                <button type="button" class="mz-button mz-border--outline mz-colors-border--red mz-colors-text--red">Error</button>
+                <button type="button" class="mz-button mz-border--outline mz-colors-border--green mz-colors-text--green">Success</button>
+                <button type="button" class="mz-button mz-border--outline mz-colors-border--midnight-black mz-colors-text--midnight-black">Dark</button>
+
+                <h4>Text buttons</h4>
+                <button type="button" class="mz-button mz-colors-text--blue">Primary</button>
+                <button type="button" class="mz-button mz-colors-text--amber">Warning</button>
+                <button type="button" class="mz-button mz-colors-text--red">Error</button>
+                <button type="button" class="mz-button mz-colors-text--green">Success</button>
+                <button type="button" class="mz-button mz-colors-text--midnight-black">Dark</button>
+
+                <h4>Buttons with icons</h4>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white"><span class="material-icons">save</span>Save</button>
+                <button type="button" class="mz-button mz-colors--midnight-blue mz-colors-text--white">Send<span class="material-icons end-icon">send</span></button>
+                <button type="button" class="mz-button mz-colors--red mz-colors-text--white"><span class="material-icons">delete</span>Delete</button>
+                <button type="button" class="mz-button mz-colors--green mz-colors-text--white"><span class="material-icons">done</span>Done</button>
+                <button type="button" class="mz-button mz-colors--midnight-black mz-colors-text--white"><span class="material-icons">star</span>Star</button>
+
+                <h4>Buttons with badges</h4>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white">
+                    Inbox
+                    <span class="mz-badge mz-rounded--pill mz-colors--white mz-colors-text--black">99+</span>
+                </button>
+                <button type="button" class="mz-button mz-colors--midnight-blue mz-colors-text--white">
+                    Messages
+                    <span class="mz-badge mz-colors--red mz-colors-text--white">99+</span>
+                </button>
+                <button type="button" class="mz-button mz-badge--overlap mz-colors--midnight-black mz-colors-text--white">
+                    Notices
+                    <span class="mz-badge mz-colors--green mz-colors-text--white">99+</span>
+                </button>
+
+                <h4>Disabled state buttons</h4>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white" disabled>Disabled button</button>
+                <button type="button" class="mz-button mz-border--outline mz-colors-border--blue mz-colors-text--blue" disabled>Disabled button</button>
+
+                <h4>Rounded and shadowy buttons</h4>
+                <button type="button" class="mz-button mz-rounded--sm mz-colors--blue mz-colors-text--white">Rounded button</button>
+                <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-border--blue mz-colors-text--blue">Outlined button</button>
+                <button type="button" class="mz-button mz-shadow mz-colors--midnight-blue mz-colors-text--white">Shadowy button</button>
+
+                <h4>Button sizes</h4>
+                <button type="button" class="mz-button mz-button--lg mz-colors--blue mz-colors-text--white">Large button</button>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white">Normal button</button>
+                <button type="button" class="mz-button mz-button--sm mz-colors--blue mz-colors-text--white">Small button</button>
+
+                <h4>Block level buttons</h4>
+                <button type="button" class="mz-button mz-button--block mz-button--lg mz-colors--midnight-blue mz-colors-text--white">Large block button</button>
+                <button type="button" class="mz-button mz-button--block mz-colors--blue mz-colors-text--white">Normal block button</button>
+
+                <h3 id="badge">Button groups</h3>
+                <p>Group a series of buttons together on a single line with the button group.</p>
+
+                <h4>Filled button group</h4>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--blue mz-colors-text--white">Left</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--blue mz-colors-text--white">Middle</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--blue mz-colors-text--white">Right</button>
+                </div>
+
+                <h4>Outlined pill-shaped button group</h4>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--pill mz-border--outline mz-colors-border--blue mz-colors-text--blue">Left</button>
+                    <button type="button" class="mz-button mz-rounded--pill mz-border--outline mz-colors-border--blue mz-colors-text--blue">Middle</button>
+                    <button type="button" class="mz-button mz-rounded--pill mz-border--outline mz-colors-border--blue mz-colors-text--blue">Right</button>
+                </div>
+
+                <h4>Button toolbar</h4>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">1</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">2</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">3</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">4</button>
+                </div>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">5</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">6</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">7</button>
+                </div>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">8</button>
+                </div>
             </main>
         </div>
     </div>

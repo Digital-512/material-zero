@@ -1,4 +1,3 @@
-@use '../variables' as var;
 @use '../mixins' as mix;
 
 .mz-badge {
@@ -8,6 +7,8 @@
     flex-direction: row;
     box-sizing: border-box;
     margin-left: 10px;
+    margin-top: -5px;
+    margin-bottom: -5px;
     padding: 0 6px;
     z-index: 1;
     flex-wrap: wrap;
@@ -26,6 +27,7 @@
 
 .mz-badge--overlap {
     position: relative;
+    overflow: visible;
 
     .mz-badge {
         position: absolute;

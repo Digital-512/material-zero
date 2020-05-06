@@ -87,7 +87,8 @@
 }
 
 .mz-navigation-link {
-    display: block;
+    display: flex;
+    align-items: center;
     color: var.$layout-header-text-color;
     text-decoration: none;
     user-select: none;

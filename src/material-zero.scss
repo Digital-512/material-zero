@@ -3,12 +3,13 @@
 // Resets and dependencies
 @use 'resets';
 @use 'typography';
-@use 'common';
 
 // Components
 @use 'layout';
 @use 'alert';
 @use 'badge';
+@use 'button';
 
-// Colors
+// Colors and other extensions
+@use 'common';
 @use 'colors';

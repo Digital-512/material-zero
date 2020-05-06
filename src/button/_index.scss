@@ -1,0 +1,83 @@
+@use '../mixins' as mix;
+
+.mz-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    background: none;
+    margin: 0;
+    padding: 14px 20px;
+    min-width: 64px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    @include mix.typo-button;
+    @include mix.action-display-1;
+
+    &.mz-button--block {
+        display: flex;
+        width: 100%;
+    }
+
+    &.mz-border--outline {
+        padding: 13px 19px;
+    }
+
+    &.mz-button--lg {
+        padding: 20px 30px;
+        font-size: 16px;
+
+        &.mz-border--outline {
+            padding: 19px 29px;
+        }
+    }
+
+    &.mz-button--sm {
+        padding: 8px 12px;
+        font-size: 12px;
+
+        &.mz-border--outline {
+            padding: 7px 11px;
+        }
+    }
+
+    &:disabled,
+    &.disabled {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.65;
+    }
+
+    .material-icons {
+        margin-right: 8px;
+        margin-left: -4px;
+        font-size: 135%;
+        vertical-align: middle;
+        line-height: 10px;
+
+        &.end-icon {
+            margin-right: -4px;
+            margin-left: 8px;
+        }
+    }
+}
+
+.mz-button-group {
+    display: inline-flex;
+    vertical-align: middle;
+
+    .mz-button:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .mz-button:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -1px;
+    }
+}
