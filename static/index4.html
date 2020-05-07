@@ -25,6 +25,33 @@
             margin-top: 0.25rem;
             margin-bottom: 0.25rem;
         }
+
+        .demo--card {
+            max-width: 350px;
+            margin-bottom: 16px;
+        }
+
+        .demo--card-image {
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+        }
+
+        .demo--card-content {
+            padding: 30px;
+        }
+
+        .demo--card-list {
+            padding: 15px 30px;
+        }
+
+        .demo--card-header {
+            padding: 20px 30px;
+        }
+
+        .demo--card .mz-button {
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -58,7 +85,7 @@
                 </div>
             </header>
             <main>
-                <h3 id="badge">Alert</h3>
+                <h3 id="alert">Alert</h3>
                 <p>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
 
                 <h4>Simple filled alerts</h4>
@@ -100,6 +127,7 @@
                     <hr class="mz-divider-horizontal">
                     <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
                 </div>
+
                 <h3 id="badge">Badge</h3>
                 <p>Small status descriptors for UI elements.</p>
 
@@ -131,7 +159,7 @@
                     </span>
                 </div>
 
-                <h3 id="badge">Button</h3>
+                <h3 id="button">Button</h3>
                 <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
 
                 <h4>Simple filled buttons</h4>
@@ -161,6 +189,15 @@
                 <button type="button" class="mz-button mz-colors--red mz-colors-text--white"><span class="material-icons">delete</span>Delete</button>
                 <button type="button" class="mz-button mz-colors--green mz-colors-text--white"><span class="material-icons">done</span>Done</button>
                 <button type="button" class="mz-button mz-colors--midnight-black mz-colors-text--white"><span class="material-icons">star</span>Star</button>
+
+                <h4>Icon buttons</h4>
+                <button type="button" class="mz-button mz-button--icon mz-colors--blue mz-colors-text--white"><span class="material-icons">save</span></button>
+                <button type="button" class="mz-button mz-button--icon mz-rounded--circle mz-colors--red mz-colors-text--white"><span class="material-icons">favorite</span></button>
+                <button type="button" class="mz-button mz-button--icon mz-rounded--circle mz-colors--midnight-blue mz-colors-text--white"><span class="material-icons">add</span></button>
+                <button type="button" class="mz-button mz-button--lg mz-button--icon mz-rounded--circle mz-colors--indigo mz-colors-text--white"><span class="material-icons">add</span></button>
+                <button type="button" class="mz-button mz-button--icon mz-rounded--circle mz-border--outline mz-colors-border--green mz-colors-text--green"><span class="material-icons">thumb_up</span></button>
+                <button type="button" class="mz-button mz-button--sm mz-button--icon mz-rounded--circle mz-colors--amber mz-colors-text--white"><span class="material-icons">mood</span></button>
+                <button type="button" class="mz-button mz-button--sm mz-button--icon mz-rounded--circle mz-colors-text--indigo"><span class="material-icons">mood</span></button>
 
                 <h4>Buttons with badges</h4>
                 <button type="button" class="mz-button mz-colors--blue mz-colors-text--white">
@@ -194,7 +231,7 @@
                 <button type="button" class="mz-button mz-button--block mz-button--lg mz-colors--midnight-blue mz-colors-text--white">Large block button</button>
                 <button type="button" class="mz-button mz-button--block mz-colors--blue mz-colors-text--white">Normal block button</button>
 
-                <h3 id="badge">Button groups</h3>
+                <h3 id="button-group">Button group</h3>
                 <p>Group a series of buttons together on a single line with the button group.</p>
 
                 <h4>Filled button group</h4>
@@ -225,6 +262,109 @@
                 </div>
                 <div class="mz-button-group">
                     <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">8</button>
+                </div>
+
+                <h4>Split buttons</h4>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--blue mz-colors-text--white">Split button</button>
+                    <button type="button" class="mz-button mz-button--icon mz-rounded--sm mz-colors--blue mz-colors-text--white"><span class="material-icons">arrow_drop_down</span></button>
+                </div>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-border--blue mz-colors-text--blue">Split button</button>
+                    <button type="button" class="mz-button mz-button--icon mz-rounded--sm mz-border--outline mz-colors-border--blue mz-colors-text--blue"><span class="material-icons">arrow_drop_down</span></button>
+                </div>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">Stars</button>
+                    <button type="button" class="mz-button mz-button--icon mz-rounded--sm mz-colors--midnight-black mz-colors-text--white"><span class="material-icons">star</span></button>
+                </div>
+
+                <h3 id="card">Card</h3>
+                <p>Self-contained pieces of paper with data.</p>
+
+                <h4>Example card</h4>
+                <div class="demo--card mz-shadow">
+                    <div class="demo--card-image" style="background-image: url('/images/card-1.jpg')"></div>
+                    <div class="demo--card-content">
+                        <p class="mz-typography--subhead mz-colors-text--green">Productivity</p>
+                        <p class="mz-typography--title">How to improve your UX writing skills</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <button type="button" class="mz-button mz-button--block mz-border--outline mz-colors-text--midnight-blue">Read more</button>
+                    </div>
+                </div>
+
+                <h4>Simple cards</h4>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-content">
+                        This is some text within a card body.
+                    </div>
+                </div>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-content">
+                        <p class="mz-typography--title">Card title</p>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="mz-button mz-colors--blue mz-colors-text--white">Card button</button>
+                        <button type="button" class="mz-button mz-colors-text--blue">Another</button>
+                    </div>
+                </div>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold">Header</div>
+                    <div class="demo--card-content">
+                        This is a simple card with a header. Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+                <div class="demo--card mz-border--outline mz-colors-border--blue">
+                    <div class="demo--card-header mz-border--bottom mz-colors-border--blue mz-colors-text--blue mz-typography--font-bold">Colored borders</div>
+                    <div class="demo--card-content mz-colors-text--blue">
+                        This is a simple card with a header. Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+                <div class="demo--card mz-shadow">
+                    <div class="demo--card-header mz-colors--blue mz-colors-text--white mz-typography--font-bold">Colored header</div>
+                    <div class="demo--card-content">
+                        This is a simple card with a header. Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+                <div class="demo--card mz-shadow">
+                    <div class="demo--card-header mz-colors--red mz-colors-text--white mz-typography--font-bold">Error!</div>
+                    <div class="demo--card-content">
+                        This is a simple card with a header. Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold">List card</div>
+                    <div class="demo--card-list mz-clickable mz-border--horizontal-inside">Cras justo odio</div>
+                    <div class="demo--card-list mz-clickable mz-border--horizontal-inside">Dapibus ac facilisis in</div>
+                    <div class="demo--card-list mz-clickable mz-border--horizontal-inside">Vestibulum at eros</div>
+                </div>
+
+                <h4>Images</h4>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-image" style="background-image: url('/images/card-2.jpg')"></div>
+                    <div class="demo--card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-content">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                    <div class="demo--card-image" style="background-image: url('/images/card-2.jpg')"></div>
+                </div>
+
+                <h4>Mixed card</h4>
+                <div class="demo--card mz-shadow">
+                    <div class="demo--card-image" style="background-image: url('/images/card-3.jpg')"></div>
+                    <div class="demo--card-content">
+                        <p class="mz-typography--title">Card title</p>
+                        <div>Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+                    </div>
+                    <div class="demo--card-list mz-clickable mz-border--horizontal-inside mz-border--top">Cras justo odio</div>
+                    <div class="demo--card-list mz-clickable mz-border--horizontal-inside">Dapibus ac facilisis in</div>
+                    <div class="demo--card-list mz-clickable mz-border--horizontal-inside">Vestibulum at eros</div>
+                    <div class="demo--card-content">
+                        <button type="button" class="mz-button mz-colors--green mz-colors-text--white">Select</button>
+                        <button type="button" class="mz-button mz-colors-text--midnight-blue">View</button>
+                    </div>
                 </div>
             </main>
         </div>

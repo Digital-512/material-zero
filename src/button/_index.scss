@@ -8,8 +8,6 @@
     background: none;
     margin: 0;
     padding: 14px 20px;
-    min-width: 64px;
-    box-sizing: border-box;
     border: none;
     outline: none;
     cursor: pointer;
@@ -21,6 +19,30 @@
     &.mz-button--block {
         display: flex;
         width: 100%;
+    }
+
+    &.mz-button--icon {
+        padding: 9px;
+
+        &.mz-border--outline {
+            padding: 8px;
+        }
+
+        &.mz-button--lg {
+            padding: 16px;
+
+            &.mz-border--outline {
+                padding: 15px;
+            }
+        }
+
+        &.mz-button--sm {
+            padding: 2px;
+
+            &.mz-border--outline {
+                padding: 1px;
+            }
+        }
     }
 
     &.mz-border--outline {
@@ -52,7 +74,7 @@
         opacity: 0.65;
     }
 
-    .material-icons {
+    &:not(.mz-button--icon) .material-icons {
         margin-right: 8px;
         margin-left: -4px;
         font-size: 135%;

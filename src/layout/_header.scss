@@ -4,7 +4,6 @@
 .mz-layout-header {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     justify-content: flex-start;
     flex-wrap: nowrap;
     flex-shrink: 0;
@@ -26,7 +25,6 @@
         margin: 0;
         padding: var.$layout-header-desktop-gutters;
         height: var.$layout-header-desktop-row-height;
-        box-sizing: border-box;
         align-self: stretch;
         align-items: center;
 

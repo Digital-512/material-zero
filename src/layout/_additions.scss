@@ -73,7 +73,6 @@
     display: block;
     @include mix.typo-title;
     font-weight: 400;
-    box-sizing: border-box;
 }
 
 .mz-layout-spacer {
@@ -83,7 +82,6 @@
 .mz-navigation {
     display: flex;
     flex-wrap: nowrap;
-    box-sizing: border-box;
 }
 
 .mz-navigation-link {

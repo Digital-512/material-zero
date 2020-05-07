@@ -46,3 +46,11 @@ main {
 *[hidden] {
     display: none !important;
 }
+
+// Set the universal box-sizing.
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
