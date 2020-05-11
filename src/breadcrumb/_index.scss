@@ -1,0 +1,21 @@
+@use '../variables' as var;
+
+.mz-breadcrumb {
+    padding: 15px 30px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    .breadcrumb-item {
+        & + .breadcrumb-item {
+            padding-left: var.$breadcrumb-padding;
+
+            &::before {
+                display: inline-block;
+                padding-right: var.$breadcrumb-padding;
+                content: var.$breadcrumb-divider;
+            }
+        }
+    }
+}

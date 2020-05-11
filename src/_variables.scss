@@ -22,6 +22,14 @@ $box-transition-duration: 0.2s !default;
 
 $selection-color: #b3d4fc !default;
 
+// DEFAULT COLORS
+
+$default-color-primary: #1976d2 !default;
+$default-color-warning: #ffa000 !default;
+$default-color-danger: #d32f2f !default;
+$default-color-success: #388e3c !default;
+$default-color-dark: #212121 !default;
+
 // TYPOGRAPHY
 
 $preferred-font: "Roboto", "Helvetica", "Arial", sans-serif !default;
@@ -39,6 +47,7 @@ $text-color-link: #006cfb !default;
 // LAYOUT
 
 $layout-non-standard-positions: true !default;
+$layout-navigation-activity-bars: true !default;
 
 $layout-screen-size-threshold: 1024px !default;
 
@@ -69,3 +78,8 @@ $layout-navigation-mobile-link-padding: 0 16px !default;
 $layout-obfuscator-color: rgba(0, 0, 0, 0.5) !default;
 $layout-transition-function: cubic-bezier(0.4, 0, 0.2, 1) !default;
 $layout-transition-duration: 0.2s !default;
+
+// BREADCRUMB
+
+$breadcrumb-divider: quote("/") !default;
+$breadcrumb-padding: 10px !default;

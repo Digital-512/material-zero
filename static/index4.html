@@ -52,6 +52,10 @@
         .demo--card .mz-button {
             margin: 0;
         }
+
+        .demo--breadcrumb {
+            margin-bottom: 16px;
+        }
     </style>
 </head>
 
@@ -61,7 +65,7 @@
             <span class="mz-layout-title mz-screen-small mz-colors--midnight-black mz-colors-text--white">Material-Zero</span>
             <hr class="mz-divider-horizontal mz-no-border">
             <nav class="mz-navigation">
-                <a class="mz-navigation-link mz-item-active" href=""><span class="material-icons">inbox</span>Inbox</a>
+                <a class="mz-navigation-link is-active" href=""><span class="material-icons">inbox</span>Inbox</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">star</span>Star</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">send</span>Sent Mail</a>
                 <a class="mz-navigation-link" href=""><span class="material-icons">drafts</span>Drafts</a>
@@ -264,6 +268,15 @@
                     <button type="button" class="mz-button mz-rounded--sm mz-colors--midnight-blue mz-colors-text--white">8</button>
                 </div>
 
+                <h4>Pagination</h4>
+                <div class="mz-button-group">
+                    <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-text--blue" disabled>Previous</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-text--blue">1</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-text--blue">2</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-text--blue">3</button>
+                    <button type="button" class="mz-button mz-rounded--sm mz-border--outline mz-colors-text--blue">Next</button>
+                </div>
+
                 <h4>Split buttons</h4>
                 <div class="mz-button-group">
                     <button type="button" class="mz-button mz-rounded--sm mz-colors--blue mz-colors-text--white">Split button</button>
@@ -364,6 +377,253 @@
                     <div class="demo--card-content">
                         <button type="button" class="mz-button mz-colors--green mz-colors-text--white">Select</button>
                         <button type="button" class="mz-button mz-colors-text--midnight-blue">View</button>
+                    </div>
+                </div>
+
+                <h3 id="breadcrumb">Breadcrumb</h3>
+                <p>Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.</p>
+
+                <h4>Example</h4>
+                <nav class="demo--breadcrumb mz-border--outline">
+                    <ul class="mz-breadcrumb">
+                        <li class="breadcrumb-item">Home</li>
+                    </ul>
+                </nav>
+                <nav class="demo--breadcrumb mz-border--outline">
+                    <ul class="mz-breadcrumb">
+                        <li class="breadcrumb-item"><a href="">Home</a></li>
+                        <li class="breadcrumb-item">Library</li>
+                    </ul>
+                </nav>
+                <nav class="demo--breadcrumb mz-border--outline">
+                    <ul class="mz-breadcrumb">
+                        <li class="breadcrumb-item"><a href="">Home</a></li>
+                        <li class="breadcrumb-item"><a href="">Library</a></li>
+                        <li class="breadcrumb-item">Data</li>
+                    </ul>
+                </nav>
+
+                <h3 id="collapse">Collapse</h3>
+                <p>Toggle the visibility of content across your project with a few classes.</p>
+
+                <h4>Example</h4>
+                <a type="button" class="mz-button mz-colors--blue mz-colors-text--white" data-trigger="collapse" href="#collapseExample1" aria-expanded="false">Link with href</a>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white" data-trigger="collapse" data-target="#collapseExample1" aria-expanded="false">Button with data-target</button>
+                <div class="mz-collapse" id="collapseExample1">
+                    <div class="mz-border--outline demo--card-content">
+                        Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                    </div>
+                </div>
+
+                <h4>Expanded by default</h4>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white" data-trigger="collapse" data-target="#collapseExample2" aria-expanded="true">Toggle collapse</button>
+                <div class="mz-collapse is-visible" id="collapseExample2">
+                    <div class="mz-border--outline demo--card-content">
+                        Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                    </div>
+                </div>
+
+                <h4>Multiple targets</h4>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white" data-trigger="collapse" data-target="#multiCollapseExample1" aria-expanded="false">Toggle first element</button>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white" data-trigger="collapse" data-target="#multiCollapseExample2" aria-expanded="false">Toggle second element</button>
+                <button type="button" class="mz-button mz-colors--blue mz-colors-text--white" data-trigger="collapse" data-target=".demo--multi-collapse" aria-expanded="false">Toggle both elements</button>
+                <div class="mz-collapse demo--multi-collapse" id="multiCollapseExample1">
+                    <div class="mz-border--outline demo--card-content">
+                        Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                    </div>
+                </div>
+                <div class="mz-collapse demo--multi-collapse" id="multiCollapseExample2">
+                    <div class="mz-border--outline demo--card-content">
+                        Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                    </div>
+                </div>
+
+                <h4>Accordion</h4>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold mz-clickable" data-trigger="collapse" data-target="#demoAccordion1a" aria-expanded="true">Collapsible group item #1</div>
+                    <div class="mz-collapse is-visible" id="demoAccordion1a">
+                        <div class="demo--card-content mz-border--bottom">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold mz-clickable" data-trigger="collapse" data-target="#demoAccordion2a" aria-expanded="false">Collapsible group item #2</div>
+                    <div class="mz-collapse" id="demoAccordion2a">
+                        <div class="demo--card-content mz-border--bottom">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                    <div class="demo--card-header mz-typography--font-bold mz-clickable" data-trigger="collapse" data-target="#demoAccordion3a" aria-expanded="false">Collapsible group item #3</div>
+                    <div class="mz-collapse" id="demoAccordion3a">
+                        <div class="demo--card-content mz-border--top">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                </div>
+
+                <h4>One active item accordion</h4>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold mz-clickable" data-trigger="collapse" data-unify=".demo--one-active-1" data-target="#demoAccordion1b" aria-expanded="true">Collapsible group item #1</div>
+                    <div class="mz-collapse demo--one-active-1 is-visible" id="demoAccordion1b">
+                        <div class="demo--card-content mz-border--bottom">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold mz-clickable" data-trigger="collapse" data-unify=".demo--one-active-1" data-target="#demoAccordion2b" aria-expanded="false">Collapsible group item #2</div>
+                    <div class="mz-collapse demo--one-active-1" id="demoAccordion2b">
+                        <div class="demo--card-content mz-border--bottom">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                    <div class="demo--card-header mz-typography--font-bold mz-clickable" data-trigger="collapse" data-unify=".demo--one-active-1" data-target="#demoAccordion3b" aria-expanded="false">Collapsible group item #3</div>
+                    <div class="mz-collapse demo--one-active-1" id="demoAccordion3b">
+                        <div class="demo--card-content mz-border--top">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="tabs">Tabs</h3>
+                <p>Tabs make it easy to explore and switch between different views.</p>
+
+                <h4>Simple tab bar</h4>
+                <div class="mz-shadow">
+                    <nav class="mz-tab-bar">
+                        <a class="mz-navigation-link" href="#">Link</a>
+                        <a class="mz-navigation-link disabled" href="#">Disabled</a>
+                        <a class="mz-navigation-link" href="#">Link</a>
+                        <a class="mz-navigation-link" href="#">Link</a>
+                    </nav>
+                </div>
+
+                <h4>Stretched simple tab bar</h4>
+                <div class="mz-shadow">
+                    <nav class="mz-tab-bar mz-navigation--stretch">
+                        <a class="mz-navigation-link" href="#">Link</a>
+                        <a class="mz-navigation-link disabled" href="#">Disabled</a>
+                        <a class="mz-navigation-link" href="#">Link</a>
+                        <a class="mz-navigation-link" href="#">Link</a>
+                    </nav>
+                </div>
+
+                <h4>Colored tab bar</h4>
+                <div class="mz-shadow">
+                    <nav class="mz-tab-bar mz-colors--blue mz-colors-text--white">
+                        <a class="mz-navigation-link" href="#">Link</a>
+                        <a class="mz-navigation-link disabled" href="#">Disabled</a>
+                        <a class="mz-navigation-link" href="#">Link</a>
+                        <a class="mz-navigation-link" href="#">Link</a>
+                    </nav>
+                </div>
+
+                <h4>Simple tabs</h4>
+                <div class="mz-shadow">
+                    <nav class="mz-tab-bar mz-colors--blue mz-colors-text--white">
+                        <a class="mz-navigation-link is-active" href="#demoTab1a" data-trigger="tab" data-unify=".demo--tabs-1" aria-expanded="true">Item one</a>
+                        <a class="mz-navigation-link" href="#demoTab2a" data-trigger="tab" data-unify=".demo--tabs-1" aria-expanded="false">Item two</a>
+                        <a class="mz-navigation-link" href="#demoTab3a" data-trigger="tab" data-unify=".demo--tabs-1" aria-expanded="false">Item three</a>
+                        <a class="mz-navigation-link" href="#demoTab4a" data-trigger="tab" data-unify=".demo--tabs-1" aria-expanded="false">Item four</a>
+                    </nav>
+                    <div class="mz-collapse demo--tabs-1 is-visible" id="demoTab1a">
+                        <div class="demo--card-content">
+                            Page one.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-1" id="demoTab2a">
+                        <div class="demo--card-content">
+                            Page two.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-1" id="demoTab3a">
+                        <div class="demo--card-content">
+                            Page three.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-1" id="demoTab4a">
+                        <div class="demo--card-content">
+                            Page four.
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Tab bar with activity indicator</h4>
+                <div class="mz-shadow">
+                    <nav class="mz-tab-bar mz-navigation--horizontal-active-bar">
+                        <a class="mz-navigation-link is-active" href="#demoTab1b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="true">Item one</a>
+                        <a class="mz-navigation-link" href="#demoTab2b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="false">Item two</a>
+                        <a class="mz-navigation-link" href="#demoTab3b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="false">Item three</a>
+                        <a class="mz-navigation-link" href="#demoTab4b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="false">Item four</a>
+                    </nav>
+                    <div class="mz-collapse demo--tabs-2 is-visible" id="demoTab1b">
+                        <div class="demo--card-content">
+                            Page one.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-2" id="demoTab2b">
+                        <div class="demo--card-content">
+                            Page two.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-2" id="demoTab3b">
+                        <div class="demo--card-content">
+                            Page three.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-2" id="demoTab4b">
+                        <div class="demo--card-content">
+                            Page four.
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Stretched tab bar</h4>
+                <div class="mz-shadow">
+                    <nav class="mz-tab-bar mz-navigation--stretch mz-colors--blue mz-colors-text--white">
+                        <a class="mz-navigation-link is-active" href="#demoTab1c" data-trigger="tab" data-unify=".demo--tabs-3" aria-expanded="true">Item one</a>
+                        <a class="mz-navigation-link" href="#demoTab2c" data-trigger="tab" data-unify=".demo--tabs-3" aria-expanded="false">Item two</a>
+                        <a class="mz-navigation-link" href="#demoTab3c" data-trigger="tab" data-unify=".demo--tabs-3" aria-expanded="false">Item three</a>
+                        <a class="mz-navigation-link" href="#demoTab4c" data-trigger="tab" data-unify=".demo--tabs-3" aria-expanded="false">Item four</a>
+                    </nav>
+                    <div class="mz-collapse demo--tabs-3 is-visible" id="demoTab1c">
+                        <div class="demo--card-content">
+                            Page one.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-3" id="demoTab2c">
+                        <div class="demo--card-content">
+                            Page two.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-3" id="demoTab3c">
+                        <div class="demo--card-content">
+                            Page three.
+                        </div>
+                    </div>
+                    <div class="mz-collapse demo--tabs-3" id="demoTab4c">
+                        <div class="demo--card-content">
+                            Page four.
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Accordion tabs</h4>
+                <div class="demo--card mz-border--outline">
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold mz-clickable" data-trigger="tab" data-unify=".demo--one-active-2" data-target="#demoAccordion1c" aria-expanded="true">Collapsible group item #1</div>
+                    <div class="mz-collapse demo--one-active-2 is-visible" id="demoAccordion1c">
+                        <div class="demo--card-content mz-border--bottom">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                    <div class="demo--card-header mz-border--bottom mz-typography--font-bold mz-clickable" data-trigger="tab" data-unify=".demo--one-active-2" data-target="#demoAccordion2c" aria-expanded="false">Collapsible group item #2</div>
+                    <div class="mz-collapse demo--one-active-2" id="demoAccordion2c">
+                        <div class="demo--card-content mz-border--bottom">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
+                    </div>
+                    <div class="demo--card-header mz-typography--font-bold mz-clickable" data-trigger="tab" data-unify=".demo--one-active-2" data-target="#demoAccordion3c" aria-expanded="false">Collapsible group item #3</div>
+                    <div class="mz-collapse demo--one-active-2" id="demoAccordion3c">
+                        <div class="demo--card-content mz-border--top">
+                            Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
+                        </div>
                     </div>
                 </div>
             </main>
