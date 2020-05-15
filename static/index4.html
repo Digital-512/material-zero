@@ -56,6 +56,19 @@
         .demo--breadcrumb {
             margin-bottom: 16px;
         }
+
+        .demo--grid-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .mz-row {
+            margin-bottom: 16px !important;
+        }
+
+        .mz-row.full-gutters {
+            margin-bottom: 8px !important;
+        }
     </style>
 </head>
 
@@ -547,7 +560,7 @@
 
                 <h4>Tab bar with activity indicator</h4>
                 <div class="mz-shadow">
-                    <nav class="mz-tab-bar mz-navigation--horizontal-active-bar">
+                    <nav class="mz-tab-bar mz-navigation-indicator">
                         <a class="mz-navigation-link is-active" href="#demoTab1b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="true">Item one</a>
                         <a class="mz-navigation-link" href="#demoTab2b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="false">Item two</a>
                         <a class="mz-navigation-link" href="#demoTab3b" data-trigger="tab" data-unify=".demo--tabs-2" aria-expanded="false">Item three</a>
@@ -624,6 +637,323 @@
                         <div class="demo--card-content mz-border--top">
                             Some quick example text to build on the collapsible title and make up the bulk of the collapsible's content.
                         </div>
+                    </div>
+                </div>
+
+                <h3 id="grid">Grid</h3>
+                <p>The grid creates visual consistency between layouts while allowing flexibility across a wide variety of designs.</p>
+
+                <h4>The basic auto layout</h4>
+                <div class="mz-row">
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+
+                <h4>No gutters</h4>
+                <div class="mz-row no-gutters">
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+
+                <h4>Percentage based columns</h4>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--3</div>
+                    </div>
+                    <div class="mz-col mz-col--9">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--9</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--4">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--4</div>
+                    </div>
+                    <div class="mz-col mz-col--4">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--4</div>
+                    </div>
+                    <div class="mz-col mz-col--4">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--4</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--5">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--5</div>
+                    </div>
+                    <div class="mz-col mz-col--2">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--2</div>
+                    </div>
+                    <div class="mz-col mz-col--2">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--2</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--3</div>
+                    </div>
+                </div>
+
+                <h4>Flex grow columns</h4>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--grow-2">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--grow-2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--grow-3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--grow-3</div>
+                    </div>
+                    <div class="mz-col mz-col--grow-2">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--grow-2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+
+                <h4>Fixed columns</h4>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--fixed" style="width: 188px;">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">Fixed width: 188px</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--fixed">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">Space it needs</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+
+                <h4>Mixed columns</h4>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--fixed" style="width: 188px;">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--fixed</div>
+                    </div>
+                    <div class="mz-col mz-col--grow-2">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--grow-2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--fixed" style="width: 188px;">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--fixed</div>
+                    </div>
+                    <div class="mz-col mz-col--grow-2">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--grow-2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--3</div>
+                    </div>
+                </div>
+
+                <h4>Content alignment</h4>
+                <div class="mz-row">
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white mz-col--top" style="height: 96px;">.mz-col--top</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white mz-col--middle" style="height: 96px;">.mz-col--middle</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white mz-col--bottom" style="height: 96px;">.mz-col--bottom</div>
+                    </div>
+                </div>
+
+                <h4>Column vertical alignment</h4>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--align-top">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col--align-top</div>
+                    </div>
+                    <div class="mz-col mz-col--align-middle">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col--align-middle</div>
+                    </div>
+                    <div class="mz-col mz-col--align-bottom">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col--align-bottom</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white mz-col--middle" style="min-height: 112px;">
+                            <div>Tall column expanding</div>
+                            <div>the height of</div>
+                            <div>the row container</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Row horizontal alignment</h4>
+                <div class="mz-row mz-row--start">
+                    <div class="mz-col mz-col--6">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--start .mz-col.mz-col--6</div>
+                    </div>
+                </div>
+                <div class="mz-row mz-row--center">
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--center .mz-col.mz-col--3</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--center .mz-col.mz-col--3</div>
+                    </div>
+                </div>
+                <div class="mz-row mz-row--end">
+                    <div class="mz-col mz-col--6">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--end .mz-col.mz-col--6</div>
+                    </div>
+                </div>
+
+                <h4>Column distribution</h4>
+                <div class="mz-row mz-row--around">
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--around .mz-col.mz-col--3</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--around .mz-col.mz-col--3</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--around .mz-col.mz-col--3</div>
+                    </div>
+                </div>
+                <div class="mz-row mz-row--between">
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--between .mz-col.mz-col--3</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--between .mz-col.mz-col--3</div>
+                    </div>
+                    <div class="mz-col mz-col--3">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-row--between .mz-col.mz-col--3</div>
+                    </div>
+                </div>
+
+                <h4>Column ordering</h4>
+                <div class="mz-row">
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">1</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">3</div>
+                    </div>
+                </div>
+                <div class="mz-row mz-row--reverse">
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">1</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">3</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">1</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">2</div>
+                    </div>
+                    <div class="mz-col mz-col--first">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col--first</div>
+                    </div>
+                </div>
+                <div class="mz-row">
+                    <div class="mz-col mz-col--last">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col--last</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">2</div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">3</div>
+                    </div>
+                </div>
+
+                <h4>Grid nesting</h4>
+                <div class="mz-row">
+                    <div class="mz-col">
+                        <div class="mz-colors--midnight-blue mz-colors-text--white" style="height: 100%;">
+                            <div style="padding: 15px 0; text-align: center;">Auto column</div>
+                            <div class="mz-row">
+                                <div class="mz-col">
+                                    <div class="demo--grid-content mz-colors--midnight-black mz-colors-text--white">Nested inside</div>
+                                </div>
+                                <div class="mz-col">
+                                    <div class="demo--grid-content mz-colors--midnight-black mz-colors-text--white">Nested inside</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mz-col">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white" style="height: 100%;">Auto column</div>
+                    </div>
+                </div>
+
+                <h4>Responsive grid</h4>
+                <div class="mz-row full-gutters">
+                    <div class="mz-col mz-col--md">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--md</div>
+                    </div>
+                    <div class="mz-col mz-col--md">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--md</div>
+                    </div>
+                    <div class="mz-col mz-col--lg">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--lg</div>
+                    </div>
+                </div>
+                <div class="mz-row full-gutters">
+                    <div class="mz-col mz-col--sm">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--sm</div>
+                    </div>
+                    <div class="mz-col mz-col--5 mz-col--sm">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--5.mz-col--sm</div>
+                    </div>
+                    <div class="mz-col mz-col--lg">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--lg</div>
+                    </div>
+                </div>
+                <div class="mz-row full-gutters">
+                    <div class="mz-col mz-col--grow-2 mz-col--md">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--grow-2.mz-col--md</div>
+                    </div>
+                    <div class="mz-col mz-col--md">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--md</div>
+                    </div>
+                    <div class="mz-col mz-col--lg">
+                        <div class="demo--grid-content mz-colors--midnight-blue mz-colors-text--white">.mz-col.mz-col--lg</div>
                     </div>
                 </div>
             </main>

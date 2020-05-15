@@ -83,3 +83,25 @@ $layout-transition-duration: 0.2s !default;
 
 $breadcrumb-divider: quote("/") !default;
 $breadcrumb-padding: 10px !default;
+
+// GRID
+
+$grid-columns: 12 !default;
+$grid-gutter: 8px !default;
+
+$grid-breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+// Structure:
+// name container-max-width screen-min-width
+$container-max-widths: (
+    sm 540px 576px,
+    md 720px 768px,
+    lg 960px 992px,
+    xl 1140px 1200px
+);

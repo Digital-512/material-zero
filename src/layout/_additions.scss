@@ -120,29 +120,41 @@
 }
 
 @if var.$layout-navigation-activity-bars {
-    .mz-navigation--horizontal-active-bar .is-active {
-        position: relative;
-        background-color: inherit;
+    .mz-navigation-indicator {
+        .is-active {
+            position: relative;
+            background-color: inherit;
 
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: var.$default-color-primary;
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: var.$default-color-primary;
+            }
+        }
+
+        &.bar-top .is-active::after {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+        }
+
+        &.bar-right .is-active::after {
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 2px;
+        }
+
+        &.bar-bottom .is-active::after,
+        &:not(.bar-top):not(.bar-right):not(.bar-left) .is-active::after {
             bottom: 0;
             left: 0;
             width: 100%;
             height: 2px;
         }
-    }
 
-    .mz-navigation--vertical-active-bar .is-active {
-        position: relative;
-        background-color: inherit;
-
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: var.$default-color-primary;
+        &.bar-left .is-active::after {
             top: 0;
             left: 0;
             height: 100%;

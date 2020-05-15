@@ -1,0 +1,20 @@
+@use '../variables' as var;
+
+// Column breakpoints
+@each $breakpoint, $size in var.$grid-breakpoints {
+    @media (max-width: $size) {
+        .mz-col--#{$breakpoint} {
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+// Container breakpoints
+@each $breakpoint, $max-width, $size in var.$container-max-widths {
+    @media (min-width: $size) {
+        .mz-container {
+            max-width: $max-width;
+        }
+    }
+}
