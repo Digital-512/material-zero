@@ -1,5 +1,11 @@
 @use '../variables' as var;
 
+.mz-container {
+    width: 100%;
+    margin: var.$container-margin;
+    padding: var.$container-padding;
+}
+
 @each $container, $max-width in var.$container-max-widths {
     .mz-container--#{$container} {
         max-width: $max-width;
