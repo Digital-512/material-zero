@@ -1,5 +1,5 @@
 import { terser } from 'rollup-plugin-terser';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
@@ -14,7 +14,7 @@ export default {
         sourcemap: true
     },
     plugins: [
-        babel(),
+        babel({ babelHelpers: 'bundled' }),
         production && terser({ compress: true, mangle: true }) // minify, but only in production
     ]
 };
